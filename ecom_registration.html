@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="homes.css">
+    </head>
+    <body>
+        <div class="account-page">
+        <div class="container">
+            <div class="row">
+            <div class="col-2">
+                <img src="img/back.jpg" width="100%">
+                </div>
+                <div class="Form-container">
+                    <div class="form-btn">
+                                <span onclick="register">Register</span>
+                                <hr id="Indicator">
+                    </div>
+                <form name="regis">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="au-input">
+                    <label for="uname">User Id</label>
+                    <input type="text" id="uname" name="uname" class="au-input">
+                    <label for="pass">Passowrd</label>
+                    <input type="password" id="pass" name="pass" class="au-input">
+                    <label for="add1">Address Line</label>
+                    <input type="text" id="add1" name="add1" class="au-input">
+                    <label for="email">Email Id</label>
+                    <input type="email" id="email" name="email" class="au-input">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" class="au-input">
+                    <label for="gender">Gender</label>
+                    <div class="gen">
+                        <input type="radio" id="gender" name="gender" value="male"/>Male
+                        <input type="radio" id="gender" name="gender" value="female"/>Female
+                    </div>
+                    
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" class="au-input">
+                    <a href="acntafter.html" class="btn"> <button type="submit" class="btn" onclick="validate">Register</button></a>
+                    <p>Already Registered?<a href="ecom_login.html">Sign In</a></p>
+                </form>
+                </div>
+                <script src="ecom_regis.js"></script>
+            </div>
+        </div>
+        </div>
+        
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+            
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px")
+                    {
+                        MenuItems.style.maxHeight = "200px";
+                    }
+                else
+                    {
+                        MenuItems.style.maxHeight = "0px"
+                    }
+            }
+        </script>
+        
+        
+        <script>
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var Indicator = document.getElementById("Indicator");
+            function register(){
+                RegForm.style.transform = "translateX(0px)";
+
+                LoginForm.style.transform = "translateX(0px)";
+                
+                Indicator.style.transform = "translateX(100px)";
+            }
+            function login(){
+                RegForm.style.transform = "translateX(300px)";
+
+                LoginForm.style.transform = "translateX(300px)";
+                
+                Indicator.style.transform = "translateX(0px)";
+            }
+            
+            
+            
+        </script>
+        
+    </body>
+</html>
